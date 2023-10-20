@@ -3,8 +3,14 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}/* box-sizing: border-box;を設定 */
- 
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+}/* box-sizing: border-box;を設定、スクロールバーの非表示 */
+ *::-webkit-scrollbar{
+  display: none;
+}/*スクロールバーの非表示をGoogle Chrome、Safariへの対応*/
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
